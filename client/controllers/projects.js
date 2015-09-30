@@ -1,7 +1,6 @@
 angular.module('emmersive')
 .controller('ProjectsController', ['$scope', '$meteor', '$rootScope', '$location', function ($scope, $meteor, $rootScope, $location) {
   $scope.projects = $meteor.collection(Projects);
-  $rootScope.$location = $location;
   $scope.remove = function(project){
     $scope.projects.remove(project);
   };
