@@ -7,7 +7,7 @@
     $ meteor
     open browser http://localhost:3000
     
-## deploy (sends to digital ocean)
+## deploy to digital ocean
     $ cd .deploy
     $ mup deploy
     open browser http://104.236.54.83:3000
