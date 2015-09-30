@@ -24,3 +24,5 @@ accounts-password
 accounts-ui
 urigo:angular-blaze-template
 less
+accounts-facebook
+service-configuration
