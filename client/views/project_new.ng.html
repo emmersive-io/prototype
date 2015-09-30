@@ -1,0 +1,27 @@
+<div class="card-panel">
+  <h4 class="header2">Start a Project</h4>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" ng-model="newProject.name">
+          <label for="first_name" class="">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="message" class="materialize-textarea" ng-model="newProject.description"></textarea>
+          <label for="message">Description</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <button class="btn cyan waves-effect waves-light" 
+                  ng-click="projects.save(newProject); newProject=''"
+                  name="action">Save
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div ng-show="!editing">
+  <div class="card-panel">
+
+    <div class="row">
+      <div class="col s12 m8">
+         <h1>{{project.name}}</h1>                     
+      </div>
+      <div class="col s12 m4 right-align">
+        <button ng-click="editing=true" class="btn-floating btn-large red">
+          <i class="large mdi-editor-mode-edit"></i>
+        </button>
+
+        <button ng-click="remove()" class="btn-floating btn-large grey">
+          <i class="material-icons dp8">delete</i><span>delete</span>
+        </button>         
+      </div>
+    </div>
+
+    {{project.description}}
+
+    <div class="section">
+      <h6>Skills Needed</h6>
+      <span ng-repeat="skill in project.skills_needed">
+        <div class="chip" >
+          {{skill.text}}
+        </div> 
+      </span>
+    </div>
+
+  </div>
+</div>
+
+<div ng-show="editing">
+  <div class="card-panel">
+
+    <h4 class="header2">Edit Project</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" type="text" ng-model="project.name">
+            <label for="first_name" class="active">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="message" class="materialize-textarea" ng-model="project.description"></textarea>
+            <label for="message" class="active">Message</label>
+
+            <tags-input ng-model="project.skills_needed"></tags-input>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <button class="btn" ng-click="project.save(); editing=false">Save</button>
+            <button class="btn grey" ng-click="editing=false">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
