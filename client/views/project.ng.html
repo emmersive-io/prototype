@@ -3,28 +3,26 @@
 
     <div class="row">
       <div class="col s12 m8">
-         <h1>{{project.name}}</h1>                     
+         <h1>{{project.name}}</h1>
       </div>
       <div class="col s12 m4 right-align">
         <button ng-click="editing=true" class="btn-floating btn-large red">
-          <i class="large mdi-editor-mode-edit"></i>
+          <i class="mdi-editor-mode-edit"></i>
         </button>
 
         <button ng-click="remove()" class="btn-floating btn-large grey">
-          <i class="material-icons dp8">delete</i><span>delete</span>
-        </button>         
+          <i class="mdi-action-delete"></i>
+        </button>
       </div>
     </div>
 
-    {{project.description}}
+    <p>{{project.description}}</p>
 
     <div class="section">
       <h6>Skills Needed</h6>
-      <span ng-repeat="skill in project.skills_needed">
-        <div class="chip" >
-          {{skill.text}}
-        </div> 
-      </span>
+      <div class="chip" ng-repeat="skill in project.skills_needed | orderBy: 'text'">
+        {{skill.text}}
+      </div>
     </div>
 
   </div>
@@ -61,6 +59,3 @@
     </div>
   </div>
 </div>
-
-
-
