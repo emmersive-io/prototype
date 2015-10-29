@@ -26,3 +26,5 @@ urigo:angular-blaze-template
 less
 accounts-facebook
 service-configuration
+materialize:materialize@=0.97.0
+mbenford:ng-tags-input

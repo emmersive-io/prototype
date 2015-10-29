@@ -1,14 +1,14 @@
 body {
   background-color: rgba(0,0,0,.2);
 }
-.tag-list li { 
-  display: inline-block; 
+.tag-list li {
+  display: inline-block;
   margin-right:10px;
   padding: 5px;
 }
 
 tags-input {
-  
+
   textarea, input { outline: none!important; }
 
   :focus {
@@ -25,11 +25,47 @@ tags-input {
   a {
     color: #000!important;
   }
-} 
+}
 
 tags-input .tags .tag-item {
   background: #E4E4E4!important;
   color: rgba(0,0,0,0.6)!important;
   border-radius: 4px;
   border:none!important;
+}
+
+.chip {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #E4E4E4;
+  margin: 2px;
+
+  img {
+    float: left;
+    margin: 0 8px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+}
+
+nav {
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+  }
+}
+
+body {
+  padding-top: 60px;
 }
